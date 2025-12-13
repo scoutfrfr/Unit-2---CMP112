@@ -15,6 +15,7 @@ public class playerMovement : MonoBehaviour
     private float movementY;
 
     private bool playerGrounded;
+    private bool facingRight;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -26,6 +27,8 @@ public class playerMovement : MonoBehaviour
     void Update()
     {
         movementX = Input.GetAxisRaw("Horizontal");
+
+        Flip(); // Calls flip function 
 
         // Checks if user is pressing space bar and that the player is grounded
         if (Input.GetKeyDown(KeyCode.Space) && playerGrounded == true)
@@ -47,6 +50,7 @@ public class playerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         rb.linearVelocity = new Vector2(movementX * playerSpeed, rb.linearVelocity.y);
+
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -55,6 +59,17 @@ public class playerMovement : MonoBehaviour
         if (collision.gameObject.tag == "Ground")
         {
             playerGrounded = true; // Sets player grounded to true so the player is able to jump
+        }
+    }
+
+    private void Flip() // Function to make player sprite flip depending on if they are going left or right
+    {
+        if (facingRight && movementX < 0f || !facingRight && movementX > 0f) // Checks if player is facing right and movementX is negative OR checks if player is NOT facing right and movementX is positive
+        {
+            facingRight = !facingRight;
+            Vector3 localScale = transform.localScale;
+            localScale.x *= -1f; // multiples players scale by -1 to "flip" the sprite
+            transform.localScale = localScale;
         }
     }
 }
