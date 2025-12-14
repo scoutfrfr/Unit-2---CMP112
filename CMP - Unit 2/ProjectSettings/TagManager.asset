@@ -5,8 +5,6 @@ TagManager:
   serializedVersion: 3
   tags:
   - Ground
-  - Pickup
-  - Coin
   layers:
   - Default
   - TransparentFX
