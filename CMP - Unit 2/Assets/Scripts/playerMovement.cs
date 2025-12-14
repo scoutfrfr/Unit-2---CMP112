@@ -1,12 +1,14 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using static Unity.VisualScripting.Member;
+using TMPro;
 
 public class playerMovement : MonoBehaviour
 {
     // Declaring public variables
     public float playerSpeed;
     public float jumpHeight;
+    public TextMeshProUGUI coinCountText;
 
 
     // Declaring private variables
@@ -14,6 +16,8 @@ public class playerMovement : MonoBehaviour
     private Animator anim;
     private float movementX;
     private float movementY;
+
+    private int coinCount;
 
     private bool playerGrounded;
     private bool facingRight;
@@ -23,6 +27,8 @@ public class playerMovement : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
+        coinCount = 0;
+        SetCountText();
     }
 
     // Update is called once per frame
@@ -73,12 +79,27 @@ public class playerMovement : MonoBehaviour
 
     }
 
+    void SetCountText()
+    {
+        coinCountText.text = "Coins: " + coinCount.ToString();
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         // Checks object player collides with has the tag "Ground"
         if (collision.gameObject.tag == "Ground")
         {
             playerGrounded = true; // Sets player grounded to true so the player is able to jump
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Coin"))
+        {
+            other.gameObject.SetActive(false); // Deactivate pick up player collided with
+            coinCount = coinCount + 1;
+            SetCountText();
         }
     }
 
