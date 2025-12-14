@@ -56,6 +56,15 @@ public class playerMovement : MonoBehaviour
         {
             anim.SetBool("isJumping", false);
         }
+
+        if (movementX != 0f && playerGrounded == true)
+        {
+            anim.SetBool("isRunning", true);
+        }
+        else
+        {
+            anim.SetBool("isRunning", false);
+        }
     }
 
     private void FixedUpdate()
