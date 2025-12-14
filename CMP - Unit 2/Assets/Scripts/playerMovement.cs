@@ -55,6 +55,7 @@ public class playerMovement : MonoBehaviour
         else
         {
             anim.SetBool("isJumping", false);
+
         }
     }
 
