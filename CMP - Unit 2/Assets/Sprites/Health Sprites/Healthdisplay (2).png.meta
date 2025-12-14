@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5444d86095ca33b45816f3c96b4cc3b2
+guid: 9ddfb8792dfb58b44a4b2a494dc1a1ab
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -120,7 +120,7 @@ TextureImporter:
         width: 15
         height: 20
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -142,7 +142,7 @@ TextureImporter:
         width: 15
         height: 20
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -164,7 +164,7 @@ TextureImporter:
         width: 15
         height: 20
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -186,7 +186,7 @@ TextureImporter:
         width: 15
         height: 20
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -208,7 +208,7 @@ TextureImporter:
         width: 15
         height: 20
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -221,33 +221,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: Healthdisplay (2)_5
-      rect:
-        serializedVersion: 2
-        x: 1
-        y: 5
-        width: 96
-        height: 94
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: aa97eadb1c63f714e9cad2739efda048
-      internalID: 504307244
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 68339594444a6fc419a81aa9d1e302e8
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -262,9 +240,6 @@ TextureImporter:
       Healthdisplay (2)_2: 5221494523353884479
       Healthdisplay (2)_3: -390302714599379504
       Healthdisplay (2)_4: 3217702214711781355
-      Healthdisplay (2)_5: 504307244
-      Healthdisplay (2)_6: -1599707737
-      Healthdisplay (2)_7: 1328390939
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
