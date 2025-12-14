@@ -7,6 +7,7 @@ public class playerMovement : MonoBehaviour
 {
     // Declaring public variables
     private Rigidbody2D rb;
+    private Animator anim;
     public float playerSpeed;
     public float jumpHeight;
     public TextMeshProUGUI coinCountText;
@@ -24,6 +25,7 @@ public class playerMovement : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         coinCount = 0;
         SetCountText();
@@ -50,6 +52,24 @@ public class playerMovement : MonoBehaviour
             // Jump mechanic 
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * 0.5f);
             playerGrounded = false;
+        }
+
+        if (playerGrounded == false)
+        {
+            anim.SetBool("isJumping", true);
+        }
+        else
+        {
+            anim.SetBool("isJumping", false);
+        }
+
+        if (playerGrounded == true && movementX != 0)
+        {
+            anim.SetBool("isRunning", true);
+        }
+        else
+        {
+            anim.SetBool("isRunning", false);
         }
     }
 
