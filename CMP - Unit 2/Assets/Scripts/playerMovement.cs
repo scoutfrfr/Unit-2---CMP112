@@ -6,13 +6,14 @@ using TMPro;
 public class playerMovement : MonoBehaviour
 {
     // Declaring public variables
-    private Rigidbody2D rb;
     public float playerSpeed;
     public float jumpHeight;
     public TextMeshProUGUI coinCountText;
 
 
     // Declaring private variables
+    private Rigidbody2D rb;
+    private Animator anim;
     private float movementX;
     private float movementY;
 
@@ -24,6 +25,7 @@ public class playerMovement : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         coinCount = 0;
         SetCountText();
@@ -41,7 +43,7 @@ public class playerMovement : MonoBehaviour
         {
             // Jump mechanic 
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpHeight);
-            playerGrounded = false; 
+            playerGrounded = false;
         }
 
         // Makes it so if player holds space they jump higher whereas if they just press space and release immediately the jump is shorter
@@ -50,6 +52,24 @@ public class playerMovement : MonoBehaviour
             // Jump mechanic 
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * 0.5f);
             playerGrounded = false;
+        }
+
+        if (playerGrounded == false)
+        {
+            anim.SetBool("isJumping", true);
+        }
+        else
+        {
+            anim.SetBool("isJumping", false);
+        }
+
+        if (movementX != 0f && playerGrounded == true)
+        {
+            anim.SetBool("isRunning", true);
+        }
+        else
+        {
+            anim.SetBool("isRunning", false);
         }
     }
 
