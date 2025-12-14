@@ -59,6 +59,11 @@ public class playerMovement : MonoBehaviour
 
     }
 
+    void SetCountText()
+    {
+        coinCountText.text = "Coins: " + coinCount.ToString();
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         // Checks object player collides with has the tag "Ground"
