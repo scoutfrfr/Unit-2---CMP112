@@ -62,6 +62,14 @@ public class playerMovement : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Coin"))
+        {
+            other.gameObject.SetActive(false); // Deactivate pick up player collided with
+        }
+    }
+
     private void Flip() // Function to make player sprite flip depending on if they are going left or right
     {
         if (facingRight && movementX < 0f || !facingRight && movementX > 0f) // Checks if player is facing right and movementX is negative OR checks if player is NOT facing right and movementX is positive
