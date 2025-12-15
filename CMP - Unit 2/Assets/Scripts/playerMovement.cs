@@ -133,7 +133,7 @@ public class playerMovement : MonoBehaviour
 
     public void Die()
     {
-        anim.SetBool("isRunning", false);  // Setting animations to false so they don't play when player dies
+        anim.SetBool("isRunning", false);
         anim.SetBool("isJumping", false);
 
 

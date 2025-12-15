@@ -4,35 +4,30 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-
-    // Declaring private variables 
     private Animator anim;
 
-
-    // Declaring public variables 
-    public float maxHealth;
+    public float maxHealth = 5f;
     public float currentHealth;
-
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        currentHealth = maxHealth; // Sets players health to max health at start of game
-        anim = GetComponent<Animator>(); // Calls the animator component
+        currentHealth = maxHealth;
+        anim = GetComponent<Animator>();
     }
 
-    public void TakeDamage(float damage) // Function to take damage
+    public void TakeDamage(float damage)
     {
         currentHealth = Mathf.Clamp(currentHealth - damage, 0, maxHealth); // Subtracts damage from players health and ensures players health never goes below zero 
-        Debug.Log(currentHealth); // Shows players current health in console
+        Debug.Log(currentHealth);
 
-        if (currentHealth > 0) 
+        if (currentHealth > 0)
         {
-            anim.SetTrigger("Damaged"); // Plays damaged animation
-            // iFrames
+            anim.SetTrigger("Damaged");
         }
         else
         {
-            GetComponent<playerMovement>().Die(); // Calls die function when playersHealth is not greater than zero
+            GetComponent<playerMovement>().Die();
+            GetComponent<playerMovement>().enabled = false;
         }
     }
 }
