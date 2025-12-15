@@ -28,6 +28,7 @@ public class Health : MonoBehaviour
         if (currentHealth > 0) 
         {
             anim.SetTrigger("Damaged"); // Plays damaged animation
+            // iFrames
         }
         else
         {
