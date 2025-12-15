@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 2def6d2f2cfdfdd4680027c4f0a08e76
+guid: 9cfc2600b42cb7745b1f4a967d484713
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7993690239625015802
-    second: KnightAttack2 (2)_0
+      213: 3790339609815546677
+    second: Dirt (1)_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: KnightAttack2 (2)_0
+      name: Dirt (1)_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 27
-        height: 32
+        width: 320
+        height: 320
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 60ec4a65415b01190800000000000000
-      internalID: -7993690239625015802
+      spriteID: 53bf5250bcdf99430800000000000000
+      internalID: 3790339609815546677
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      KnightAttack2 (2)_0: -7993690239625015802
+      Dirt (1)_0: 3790339609815546677
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

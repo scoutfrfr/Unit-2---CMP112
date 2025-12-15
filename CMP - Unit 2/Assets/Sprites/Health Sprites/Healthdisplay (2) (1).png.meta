@@ -1,22 +1,22 @@
 fileFormatVersion: 2
-guid: 9ddfb8792dfb58b44a4b2a494dc1a1ab
+guid: 1944fb28ff31c684eb836f51e6295214
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -71368904053111574
-    second: Healthdisplay (2)_0
+      213: -5735287758243256277
+    second: Healthdisplay (2) (1)_0
   - first:
-      213: -1897871664961097458
-    second: Healthdisplay (2)_1
+      213: -7435940285712681815
+    second: Healthdisplay (2) (1)_1
   - first:
-      213: 5221494523353884479
-    second: Healthdisplay (2)_2
+      213: 8984659407432380726
+    second: Healthdisplay (2) (1)_2
   - first:
-      213: -390302714599379504
-    second: Healthdisplay (2)_3
+      213: -2351641274529296720
+    second: Healthdisplay (2) (1)_3
   - first:
-      213: 3217702214711781355
-    second: Healthdisplay (2)_4
+      213: -6734242512424454634
+    second: Healthdisplay (2) (1)_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -112,13 +112,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Healthdisplay (2)_0
+      name: Healthdisplay (2) (1)_0
       rect:
         serializedVersion: 2
-        x: 9
-        y: 42
-        width: 15
-        height: 20
+        x: 99
+        y: 429
+        width: 132
+        height: 182
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -127,20 +127,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ae4c7e12c52720ff0800000000000000
-      internalID: -71368904053111574
+      spriteID: b28a345bb2a2860b0800000000000000
+      internalID: -5735287758243256277
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Healthdisplay (2)_1
+      name: Healthdisplay (2) (1)_1
       rect:
         serializedVersion: 2
-        x: 23
-        y: 42
-        width: 15
-        height: 20
+        x: 239
+        y: 429
+        width: 132
+        height: 182
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -149,20 +149,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e01f6bca6c769a5e0800000000000000
-      internalID: -1897871664961097458
+      spriteID: 9a4341b15bb3ec890800000000000000
+      internalID: -7435940285712681815
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Healthdisplay (2)_2
+      name: Healthdisplay (2) (1)_2
       rect:
         serializedVersion: 2
-        x: 37
-        y: 42
-        width: 15
-        height: 20
+        x: 379
+        y: 429
+        width: 132
+        height: 182
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -171,20 +171,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f37e725ba99767840800000000000000
-      internalID: 5221494523353884479
+      spriteID: 631f0e7d02cefac70800000000000000
+      internalID: 8984659407432380726
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Healthdisplay (2)_3
+      name: Healthdisplay (2) (1)_3
       rect:
         serializedVersion: 2
-        x: 51
-        y: 42
-        width: 15
-        height: 20
+        x: 519
+        y: 429
+        width: 132
+        height: 182
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -193,20 +193,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0ddee6dbfbd559af0800000000000000
-      internalID: -390302714599379504
+      spriteID: 0bec88868ba4d5fd0800000000000000
+      internalID: -2351641274529296720
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Healthdisplay (2)_4
+      name: Healthdisplay (2) (1)_4
       rect:
         serializedVersion: 2
-        x: 65
-        y: 42
-        width: 15
-        height: 20
+        x: 659
+        y: 429
+        width: 132
+        height: 182
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -215,20 +215,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: be722ecbd1397ac20800000000000000
-      internalID: 3217702214711781355
+      spriteID: 6163b9f4d1a2b82a0800000000000000
+      internalID: -6734242512424454634
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Healthdisplay (2)_5
+      name: Healthdisplay (2) (1)_5
       rect:
         serializedVersion: 2
-        x: 1
-        y: 8
-        width: 85
-        height: 92
+        x: 57
+        y: 169
+        width: 850
+        height: 594
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -237,8 +237,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 947c9cd76c68c7749bbc641306591133
-      internalID: 2101064438
+      spriteID: 253902a0e33e72a4cb1d58743b5eecc0
+      internalID: -1799098389
       vertices: []
       indices: 
       edges: []
@@ -247,7 +247,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: c8151ff4d547caa4b83e2fbcdb70391a
+    spriteID: 0279b1fe05b38874db4051238efe6817
     internalID: 0
     vertices: []
     indices: 
@@ -257,12 +257,12 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Healthdisplay (2)_0: -71368904053111574
-      Healthdisplay (2)_1: -1897871664961097458
-      Healthdisplay (2)_2: 5221494523353884479
-      Healthdisplay (2)_3: -390302714599379504
-      Healthdisplay (2)_4: 3217702214711781355
-      Healthdisplay (2)_5: 2101064438
+      Healthdisplay (2) (1)_0: -5735287758243256277
+      Healthdisplay (2) (1)_1: -7435940285712681815
+      Healthdisplay (2) (1)_2: 8984659407432380726
+      Healthdisplay (2) (1)_3: -2351641274529296720
+      Healthdisplay (2) (1)_4: -6734242512424454634
+      Healthdisplay (2) (1)_5: -1799098389
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
