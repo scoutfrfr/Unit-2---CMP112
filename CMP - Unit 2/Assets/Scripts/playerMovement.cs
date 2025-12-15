@@ -103,7 +103,7 @@ public class playerMovement : MonoBehaviour
             playerGrounded = true; // Sets player grounded to true so the player is able to jump
         }
 
-        if (collision.gameObject.name == "outOfBounds")
+        if (collision.gameObject.tag == "Respawn")
         {
             inRespawn = true;
         }

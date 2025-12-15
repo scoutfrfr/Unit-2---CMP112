@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 981c9bdd26a9c16449307f53286986ee
+guid: f0a78a1ae4a222341a6a12f12a5c5b7a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7680169716188871220
-    second: KnightRunning2_0
+      213: -4829389989316668447
+    second: Knight (1)_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: KnightRunning2_0
+      name: Knight (1)_0
       rect:
         serializedVersion: 2
-        x: 1
+        x: 9
         y: 0
-        width: 30
-        height: 32
+        width: 242
+        height: 320
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cc589db955e8a6590800000000000000
-      internalID: -7680169716188871220
+      spriteID: 1e3d3f4546f8afcb0800000000000000
+      internalID: -4829389989316668447
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      KnightRunning2_0: -7680169716188871220
+      Knight (1)_0: -4829389989316668447
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

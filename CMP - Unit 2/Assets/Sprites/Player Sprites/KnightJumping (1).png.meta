@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 05c3ffdcfc344da4196883ba13dd0819
+guid: fa5372ac056591345a000e74a19daa56
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2038194026746651142
-    second: KnightIdle2_0
+      213: 7239168670168711013
+    second: KnightJumping (1)_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: KnightIdle2_0
+      name: KnightJumping (1)_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 26
-        height: 32
+        x: 19
+        y: 9
+        width: 272
+        height: 311
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 602ae832bae194c10800000000000000
-      internalID: 2038194026746651142
+      spriteID: 56ffa8efc81b67460800000000000000
+      internalID: 7239168670168711013
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      KnightIdle2_0: 2038194026746651142
+      KnightJumping (1)_0: 7239168670168711013
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
