@@ -6,14 +6,17 @@ using TMPro;
 public class playerMovement : MonoBehaviour
 {
     // Declaring public variables
-    private Rigidbody2D rb;
-    private Animator anim;
     public float playerSpeed;
     public float jumpHeight;
+
     public TextMeshProUGUI coinCountText;
+    public Transform spawnPoint;
 
 
     // Declaring private variables
+    private Rigidbody2D rb;
+    private Animator anim;
+
     private float movementX;
     private float movementY;
 
@@ -21,6 +24,7 @@ public class playerMovement : MonoBehaviour
 
     private bool playerGrounded;
     private bool facingRight;
+    private bool inRespawn;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -54,16 +58,23 @@ public class playerMovement : MonoBehaviour
             playerGrounded = false;
         }
 
-        if (playerGrounded == false)
+        while (inRespawn == true)
         {
-            anim.SetBool("isJumping", true);
+            transform.position = spawnPoint.position;
+            inRespawn = false;
+        }
+
+        // Player Sprite Animations
+        if (playerGrounded == false) // Jumping animation
+        {
+            anim.SetBool("isJumping", true); 
         }
         else
         {
             anim.SetBool("isJumping", false);
         }
 
-        if (playerGrounded == true && movementX != 0)
+        if (playerGrounded == true && movementX != 0) // Running animation
         {
             anim.SetBool("isRunning", true);
         }
@@ -90,6 +101,11 @@ public class playerMovement : MonoBehaviour
         if (collision.gameObject.tag == "Ground")
         {
             playerGrounded = true; // Sets player grounded to true so the player is able to jump
+        }
+
+        if (collision.gameObject.name == "outOfBounds")
+        {
+            inRespawn = true;
         }
     }
 
