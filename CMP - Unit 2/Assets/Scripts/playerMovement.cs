@@ -129,4 +129,14 @@ public class playerMovement : MonoBehaviour
             transform.localScale = localScale;
         }
     }
+    
+
+    public void Die()
+    {
+        anim.SetBool("isRunning", false);  // Setting animations to false so they don't play when player dies
+        anim.SetBool("isJumping", false);
+
+
+        rb.linearVelocity = new Vector2(0, 0); // Stops player from moving when dead
+    }
 }
