@@ -25,8 +25,8 @@ RenderSettings:
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
   m_AmbientMode: 3
-  m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 0}
+  m_SubtractiveShadowColor: {r: 0.11764707, g: 0.14509805, b: 0.21568629, a: 1}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 101c705a1fc4c574faf98f78029e89ad, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -301,6 +301,7 @@ GameObject:
   - component: {fileID: 53838876}
   - component: {fileID: 53838878}
   - component: {fileID: 53838877}
+  - component: {fileID: 53838879}
   m_Layer: 0
   m_Name: Acid (1)
   m_TagString: Respawn
@@ -353,7 +354,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -427,6 +428,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &53838879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 53838875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0c9ee9a24c38c94481fbc621c492cfa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::enemyDamage
+  damage: 1
 --- !u!1 &136919613
 GameObject:
   m_ObjectHideFlags: 0
@@ -1286,7 +1300,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -1338,6 +1352,7 @@ GameObject:
   - component: {fileID: 426165474}
   - component: {fileID: 426165476}
   - component: {fileID: 426165475}
+  - component: {fileID: 426165477}
   m_Layer: 0
   m_Name: Acid (2)
   m_TagString: Respawn
@@ -1390,7 +1405,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -1464,6 +1479,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &426165477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 426165473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0c9ee9a24c38c94481fbc621c492cfa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::enemyDamage
+  damage: 1
 --- !u!1 &513738595
 GameObject:
   m_ObjectHideFlags: 0
@@ -1871,7 +1899,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -3930,6 +3958,7 @@ GameObject:
   - component: {fileID: 1785460418}
   - component: {fileID: 1785460417}
   - component: {fileID: 1785460416}
+  - component: {fileID: 1785460419}
   m_Layer: 0
   m_Name: Acid
   m_TagString: Respawn
@@ -3967,7 +3996,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -4056,6 +4085,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 598447948}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1785460419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1785460415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0c9ee9a24c38c94481fbc621c492cfa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::enemyDamage
+  damage: 1
 --- !u!1 &1898101635
 GameObject:
   m_ObjectHideFlags: 0
@@ -4170,6 +4212,7 @@ GameObject:
   - component: {fileID: 1938789894}
   - component: {fileID: 1938789896}
   - component: {fileID: 1938789895}
+  - component: {fileID: 1938789897}
   m_Layer: 0
   m_Name: Acid (3)
   m_TagString: Respawn
@@ -4222,7 +4265,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -4296,6 +4339,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1938789897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1938789893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0c9ee9a24c38c94481fbc621c492cfa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::enemyDamage
+  damage: 1
 --- !u!1 &1962443412
 GameObject:
   m_ObjectHideFlags: 0
