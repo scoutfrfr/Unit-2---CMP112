@@ -29,6 +29,7 @@ public class playerMovement : MonoBehaviour
     // Audio Variables
     private AudioSource source;
     public AudioClip jumpSound;
+    public AudioClip coinSound;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -62,7 +63,6 @@ public class playerMovement : MonoBehaviour
             // Jump mechanic 
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * 0.5f);
             playerGrounded = false;
-            source.PlayOneShot(jumpSound, 1.0f);
         }
 
         while (inRespawn == true)
@@ -123,6 +123,7 @@ public class playerMovement : MonoBehaviour
             other.gameObject.SetActive(false); // Deactivate pick up player collided with
             coinCount = coinCount + 1;
             SetCountText();
+            source.PlayOneShot(coinSound, 1.0f);
         }
     }
 
