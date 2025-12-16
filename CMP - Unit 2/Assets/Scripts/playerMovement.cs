@@ -26,11 +26,17 @@ public class playerMovement : MonoBehaviour
     private bool facingRight;
     private bool inRespawn;
 
+    // Audio Variables
+    private AudioSource source;
+    public AudioClip jumpSound;
+    public AudioClip coinSound;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
+        source = GetComponent<AudioSource>();   
         coinCount = 0;
         SetCountText();
     }
@@ -48,6 +54,7 @@ public class playerMovement : MonoBehaviour
             // Jump mechanic 
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpHeight);
             playerGrounded = false;
+            source.PlayOneShot(jumpSound, 1.0f);
         }
 
         // Makes it so if player holds space they jump higher whereas if they just press space and release immediately the jump is shorter
@@ -116,6 +123,7 @@ public class playerMovement : MonoBehaviour
             other.gameObject.SetActive(false); // Deactivate pick up player collided with
             coinCount = coinCount + 1;
             SetCountText();
+            source.PlayOneShot(coinSound, 1.0f);
         }
     }
 
