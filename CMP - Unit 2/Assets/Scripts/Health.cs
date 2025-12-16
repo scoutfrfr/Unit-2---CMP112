@@ -4,11 +4,15 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
+    // Components
     private Animator anim;
     private AudioSource source;
 
+    [Header("Health Variables")] // Variables to do with players health
     public float maxHealth = 5f;
     public float currentHealth;
+
+    [Header("Sound effects")] // Sound effects
     public AudioClip damageSound;
     public AudioClip healthPickupSound;
 

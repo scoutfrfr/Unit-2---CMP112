@@ -5,28 +5,26 @@ using TMPro;
 
 public class playerMovement : MonoBehaviour
 {
-    // Declaring public variables
-    public float playerSpeed;
-    public float jumpHeight;
-
-    public TextMeshProUGUI coinCountText;
-    public Transform spawnPoint;
-
-
-    // Declaring private variables
+    // Declaring private components
     private Rigidbody2D rb;
     private Animator anim;
 
+    [Header("Player Movement")] // Variables to do with the players movements
+    public float playerSpeed;
+    public float jumpHeight;
     private float movementX;
-    private float movementY;
-
-    private int coinCount;
-
     private bool playerGrounded;
     private bool facingRight;
+
+    [Header("Coins")] // Variables to do with the coin pickup
+    public TextMeshProUGUI coinCountText;
+    private int coinCount;
+
+    [Header("Respawn")] // Variables to do with respawning
+    public Transform spawnPoint;
     private bool inRespawn;
 
-    // Audio Variables
+    [Header("Sound effects")] // Sound effects
     private AudioSource source;
     public AudioClip jumpSound;
     public AudioClip coinSound;
