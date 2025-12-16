@@ -10,6 +10,7 @@ public class Health : MonoBehaviour
     public float maxHealth = 5f;
     public float currentHealth;
     public AudioClip damageSound;
+    public AudioClip healthPickupSound;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -36,4 +37,11 @@ public class Health : MonoBehaviour
             source.PlayOneShot(damageSound, 1.0f);
         }
     }
+
+    public void HealthRegen(int healthValue)
+    {
+        currentHealth = Mathf.Clamp(currentHealth + healthValue, 0, maxHealth);
+        source.PlayOneShot(healthPickupSound, 1.0f);
+    }
+
 }
