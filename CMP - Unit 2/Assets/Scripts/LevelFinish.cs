@@ -11,11 +11,15 @@ public class LevelFinish : MonoBehaviour
     private bool doorUnlocked;
     private playerMovement player;
     private Animator anim;
+    private AudioSource source;
+
+    public AudioClip keyTurning;
 
     private void Start()
     {
         player = FindFirstObjectByType<playerMovement>();
         anim = GetComponent<Animator>();
+        source = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -34,6 +38,7 @@ public class LevelFinish : MonoBehaviour
         {
             if (player.keyCollected == true)
             {
+                source.PlayOneShot(keyTurning, 5.0f);
                 anim.SetBool("doorOpen", true);
                 StartCoroutine(DelayBeforeNextLevel());
             }

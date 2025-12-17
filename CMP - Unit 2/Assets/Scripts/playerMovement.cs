@@ -35,6 +35,8 @@ public class playerMovement : MonoBehaviour
     public AudioClip jumpSound;
     public AudioClip coinSound;
     public AudioClip keySound;
+    public AudioClip playerDying;
+    public AudioClip GameOverSound;
 
     [Header("Game Over Scene Selection")]
     public string gameOver;
@@ -161,7 +163,7 @@ public class playerMovement : MonoBehaviour
     {
         anim.SetBool("isRunning", false);
         anim.SetBool("isJumping", false);
-
+        source.PlayOneShot(playerDying, 1.0f);
 
         rb.linearVelocity = new Vector2(0, 0); // Stops player from moving when dead
         StartCoroutine(DeathDelay());
@@ -170,7 +172,10 @@ public class playerMovement : MonoBehaviour
 
     private IEnumerator DeathDelay()
     {
+        source.PlayOneShot(GameOverSound, 1.0f);
         yield return new WaitForSeconds(2);
         SceneManager.LoadScene(gameOver);
+       
+
     }
 }
