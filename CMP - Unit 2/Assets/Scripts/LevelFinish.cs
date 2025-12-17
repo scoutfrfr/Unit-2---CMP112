@@ -6,13 +6,11 @@ public class LevelFinish : MonoBehaviour
 {
 
     public string levelName;
-    public string mainMenu;
     private bool doorUnlocked;
     private playerMovement player;
 
     private void Start()
     {
-        SceneManager.LoadScene(mainMenu);
         player = FindFirstObjectByType<playerMovement>();
     }
 
