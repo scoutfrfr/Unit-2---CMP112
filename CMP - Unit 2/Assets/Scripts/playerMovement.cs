@@ -1,7 +1,8 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 using static Unity.VisualScripting.Member;
-using TMPro;
 
 public class playerMovement : MonoBehaviour
 {
@@ -16,9 +17,10 @@ public class playerMovement : MonoBehaviour
     private bool playerGrounded;
     private bool facingRight;
 
-    [Header("Coins")] // Variables to do with the coin pickup
+    [Header("Pickups")] // Variables to do with pickups
     public TextMeshProUGUI coinCountText;
     private int coinCount;
+    public bool keyCollected;
 
     [Header("Respawn")] // Variables to do with respawning
     public Transform spawnPoint;
@@ -37,6 +39,7 @@ public class playerMovement : MonoBehaviour
         source = GetComponent<AudioSource>();   
         coinCount = 0;
         SetCountText();
+        keyCollected = false;
     }
 
     // Update is called once per frame
@@ -123,7 +126,14 @@ public class playerMovement : MonoBehaviour
             SetCountText();
             source.PlayOneShot(coinSound, 1.0f);
         }
+
+        if (other.gameObject.CompareTag("Key"))
+        {
+            other.gameObject.SetActive(false); // Deactivate pick up player collided with
+            keyCollected = true;
+        }
     }
+
 
     private void Flip() // Function to make player sprite flip depending on if they are going left or right
     {
