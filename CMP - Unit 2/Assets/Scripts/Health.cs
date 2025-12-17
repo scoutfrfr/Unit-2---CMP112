@@ -10,6 +10,7 @@ public class Health : MonoBehaviour
 
     [Header("Health Variables")] // Variables to do with players health
     public float maxHealth = 5f;
+    [HideInInspector]
     public float currentHealth;
 
     [Header("Sound effects")] // Sound effects

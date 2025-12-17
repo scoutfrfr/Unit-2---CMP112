@@ -1,3 +1,4 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -9,28 +10,35 @@ public class playerMovement : MonoBehaviour
     // Declaring private components
     private Rigidbody2D rb;
     private Animator anim;
+    [Header("Player Sprite")]
+    public SpriteRenderer mySprite;
 
-    [Header("Player Movement")] // Variables to do with the players movements
+    [Header("Player Movement")] 
     public float playerSpeed;
     public float jumpHeight;
     private float movementX;
     private bool playerGrounded;
     private bool facingRight;
 
-    [Header("Pickups")] // Variables to do with pickups
+    [Header("Pickups")] 
     public TextMeshProUGUI coinCountText;
     private int coinCount;
+    [HideInInspector]
     public bool keyCollected;
 
-    [Header("Respawn")] // Variables to do with respawning
+    [Header("Respawn")] 
     public Transform spawnPoint;
     private bool inRespawn;
 
-    [Header("Sound effects")] // Sound effects
+    [Header("Sound effects")] 
     private AudioSource source;
     public AudioClip jumpSound;
     public AudioClip coinSound;
     public AudioClip keySound;
+
+    [Header("Game Over Scene Selection")]
+    public string gameOver;
+    private bool loadNextLevelStart;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -156,5 +164,13 @@ public class playerMovement : MonoBehaviour
 
 
         rb.linearVelocity = new Vector2(0, 0); // Stops player from moving when dead
+        StartCoroutine(DeathDelay());
+
+    }
+
+    private IEnumerator DeathDelay()
+    {
+        yield return new WaitForSeconds(2);
+        SceneManager.LoadScene(gameOver);
     }
 }
