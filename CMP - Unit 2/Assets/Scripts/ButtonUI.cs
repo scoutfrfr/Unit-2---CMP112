@@ -5,10 +5,17 @@ using UnityEngine.SceneManagement;
 
 public class ButtonUI : MonoBehaviour
 {
-    [Header ("Starting Level")]
+    [Header ("Level Selection")]
     public string GameStartLevel;
+    public string MainMenu;
     public void StartGameButton()
     {
         SceneManager.LoadScene(GameStartLevel);
     }
+
+    public void RestartGameButton()
+    {
+        SceneManager.LoadScene(MainMenu);
+    }
+
 }

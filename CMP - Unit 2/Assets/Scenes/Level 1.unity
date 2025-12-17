@@ -416,7 +416,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 3
   m_Sprite: {fileID: 5909282766441892069, guid: b1a8d847fffb3ad489738a8115bf0436, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1267,6 +1267,8 @@ MonoBehaviour:
   spawnPoint: {fileID: 339195404}
   jumpSound: {fileID: 8300000, guid: e0801de9bca680544a6bdf39976560e1, type: 3}
   coinSound: {fileID: 8300000, guid: 196da686eeeaacc4b8e525e3cde5ef6c, type: 3}
+  keySound: {fileID: 8300000, guid: 196da686eeeaacc4b8e525e3cde5ef6c, type: 3}
+  gameOver: Game Over
 --- !u!50 &425394599
 Rigidbody2D:
   serializedVersion: 5
@@ -1470,11 +1472,12 @@ PolygonCollider2D:
       - {x: -0.9161873, y: -0.9172832}
       - {x: -0.9, y: -1.02}
       - {x: -0.52, y: -1.02}
-      - {x: -0.5180193, y: -1.5999926}
-      - {x: 0.13725366, y: -1.5988533}
-      - {x: 0.24101911, y: -1.6012056}
-      - {x: 0.6111721, y: -1.5999638}
-      - {x: 0.8931944, y: -1.5999937}
+      - {x: -0.50042474, y: -1.5692018}
+      - {x: 0.14165282, y: -1.5724615}
+      - {x: 0.25421524, y: -1.5704149}
+      - {x: 0.42299256, y: -1.5698489}
+      - {x: 0.6199697, y: -1.5691731}
+      - {x: 0.8887952, y: -1.5692027}
       - {x: 0.8956412, y: -1.2164395}
       - {x: 0.83803695, y: -1.0516208}
       - {x: 1.11, y: -1.05}
@@ -1784,7 +1787,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 3
   m_Sprite: {fileID: 6375798946270545504, guid: 48473236843a2fc4aa6024bd6ea397e4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2878,6 +2881,7 @@ GameObject:
   - component: {fileID: 824981261}
   - component: {fileID: 824981264}
   - component: {fileID: 824981263}
+  - component: {fileID: 824981265}
   m_Layer: 0
   m_Name: Door
   m_TagString: Untagged
@@ -2971,7 +2975,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   levelName: Level 2
-  mainMenu: MainMenu
 --- !u!60 &824981264
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -3028,6 +3031,28 @@ PolygonCollider2D:
       - {x: 0.96999997, y: 1.0849999}
       - {x: 0.84999996, y: 1.2049999}
   m_UseDelaunayMesh: 0
+--- !u!95 &824981265
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 824981260}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f15ded77e16d7974a9c04797b404f88a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &825610590
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4899,7 +4924,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 3
   m_Sprite: {fileID: -1251860287476809582, guid: a7fb8e787d3058b46b789f243930f5c1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -5168,7 +5193,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 3
   m_Sprite: {fileID: 8480865998718229911, guid: 2bdd09f37e0709b4e836b33bbfbf8e3a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
