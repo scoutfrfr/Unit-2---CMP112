@@ -1361,7 +1361,7 @@ Transform:
   m_GameObject: {fileID: 425394597}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.68, y: -0.933, z: 0}
+  m_LocalPosition: {x: -5.47, y: -0.933, z: 0}
   m_LocalScale: {x: -0.7, y: 0.7, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2971,6 +2971,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   levelName: Level 2
+  mainMenu: MainMenu
 --- !u!60 &824981264
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -4073,7 +4074,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: -148561870894322851, guid: baac9cbff3bdb3745b7df250e282fdcd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -5544,7 +5545,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -2
   m_Sprite: {fileID: 8670121877727909007, guid: 2c99b050441b208468bba9fa3282c7f0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
