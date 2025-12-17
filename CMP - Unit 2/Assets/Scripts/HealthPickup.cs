@@ -12,7 +12,7 @@ public class HealthPickup : MonoBehaviour
         if (collision.tag == "Player") // Checks if object collided with has tag "Player"
         {
             int healthValue = Random.Range(1, 4); // Generates random number 1-3, this will be the amount of health the player gets back from the health pickup.
-            Debug.Log(healthValue); // Prints value of healthValue in console (used to test it worked)
+            Debug.Log(healthValue); // Prints value of healthValue in console (used for testing)
             collision.GetComponent<Health>().HealthRegen(healthValue); // Calls HealthRegen function from Health script
             gameObject.SetActive(false); // Sets object as false so it can't be collected multiple times
             

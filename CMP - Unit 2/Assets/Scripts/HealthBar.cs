@@ -3,7 +3,10 @@ using UnityEngine.UI;
 
 public class HealthBar : MonoBehaviour
 {
+    [Header("Health Script")]
     public Health playerHealth;
+
+    [Header("Health Bar UI")]
     public Image FullHealthBar;
     public Image CurrentHealthBar;
 

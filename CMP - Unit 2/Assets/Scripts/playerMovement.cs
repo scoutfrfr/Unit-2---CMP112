@@ -7,11 +7,9 @@ using static Unity.VisualScripting.Member;
 
 public class playerMovement : MonoBehaviour
 {
-    // Declaring private components
+    // Components
     private Rigidbody2D rb;
     private Animator anim;
-    [Header("Player Sprite")]
-    public SpriteRenderer mySprite;
 
     [Header("Player Movement")] 
     public float playerSpeed;
@@ -22,7 +20,7 @@ public class playerMovement : MonoBehaviour
 
     [Header("Pickups")] 
     public TextMeshProUGUI coinCountText;
-    private int coinCount;
+    private static int coinCount; // static so coinCount carries across scenes
     public TextMeshProUGUI keyCollectedText;
     [HideInInspector]
     public bool keyCollected;
@@ -41,17 +39,21 @@ public class playerMovement : MonoBehaviour
 
     [Header("Game Over Scene Selection")]
     public string gameOver;
-    private bool loadNextLevelStart;
+    
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        // Get Components
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         source = GetComponent<AudioSource>();   
-        coinCount = 0;
-        SetCountText();
+
+        // Set text
+        SetCountText(); 
         SetKeyText();
+
+        // Set variables
         keyCollected = false;
     }
 
@@ -81,7 +83,7 @@ public class playerMovement : MonoBehaviour
 
         while (inRespawn == true)
         {
-            transform.position = spawnPoint.position;
+            transform.position = spawnPoint.position; // while player is inRespawn transform their position to spawn point position
             inRespawn = false;
         }
 
@@ -107,16 +109,17 @@ public class playerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rb.linearVelocity = new Vector2(movementX * playerSpeed, rb.linearVelocity.y);
+        // Left & Right movement
+        rb.linearVelocity = new Vector2(movementX * playerSpeed, rb.linearVelocity.y); // makes the player move by using velocity, multiplying movementX (horizontal input) by the players speed. 
 
     }
 
-    void SetCountText()
+    void SetCountText() // Sets coin count text to amount of coins player has collected
     {
         coinCountText.text = "Coins: " + coinCount.ToString();
     }
 
-    void SetKeyText()
+    void SetKeyText() // Sets key text to yes or no depending on if the key in the current scene has been collected
     {
         if (keyCollected == true)
         {
@@ -137,7 +140,7 @@ public class playerMovement : MonoBehaviour
             playerGrounded = true; // Sets player grounded to true so the player is able to jump
         }
 
-        if (collision.gameObject.tag == "Respawn")
+        if (collision.gameObject.tag == "Respawn") // Checks if player has collided with respawn tagged objects
         {
             inRespawn = true;
         }
@@ -145,15 +148,15 @@ public class playerMovement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Coin"))
+        if (other.gameObject.CompareTag("Coin")) // Checks if the player has collided with coin
         {
             other.gameObject.SetActive(false); // Deactivate pick up player collided with
-            coinCount = coinCount + 1;
-            SetCountText();
+            coinCount = coinCount + 1; // Adds one to coin count
+            SetCountText(); // Sets coinCount text
             source.PlayOneShot(coinSound, 1.0f);
         }
 
-        if (other.gameObject.CompareTag("Key"))
+        if (other.gameObject.CompareTag("Key")) // Checks if the player has collided with key
         {
             other.gameObject.SetActive(false); // Deactivate pick up player collided with
             keyCollected = true;
@@ -177,21 +180,24 @@ public class playerMovement : MonoBehaviour
 
     public void Die()
     {
-        anim.SetBool("isRunning", false);
-        anim.SetBool("isJumping", false);
-        source.PlayOneShot(playerDying, 1.0f);
+        anim.SetBool("isRunning", false); // ensures is Running animation doesnt play
+        anim.SetBool("isJumping", false); // ensures isJumping animation doesnt play
+        source.PlayOneShot(playerDying, 1.0f); 
+        coinCount = 0; // Sets coin amount to 0 when player dies
 
         rb.linearVelocity = new Vector2(0, 0); // Stops player from moving when dead
-        StartCoroutine(DeathDelay());
+        StartCoroutine(DeathDelay()); 
 
     }
 
-    private IEnumerator DeathDelay()
+    private IEnumerator DeathDelay() 
     {
-        source.PlayOneShot(GameOverSound, 1.0f);
-        yield return new WaitForSeconds(2);
-        SceneManager.LoadScene(gameOver);
+        source.PlayOneShot(GameOverSound, 1.0f); 
+        yield return new WaitForSeconds(2); // waits for two seconds
+        SceneManager.LoadScene(gameOver); // changes scene to gameOver scene
        
 
     }
 }
+
+
