@@ -1,3 +1,4 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -9,6 +10,8 @@ public class playerMovement : MonoBehaviour
     // Declaring private components
     private Rigidbody2D rb;
     private Animator anim;
+    [Header("Player Sprite")]
+    public SpriteRenderer mySprite;
 
     [Header("Player Movement")] 
     public float playerSpeed;
@@ -35,6 +38,7 @@ public class playerMovement : MonoBehaviour
 
     [Header("Game Over Scene Selection")]
     public string gameOver;
+    private bool loadNextLevelStart;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -160,6 +164,13 @@ public class playerMovement : MonoBehaviour
 
 
         rb.linearVelocity = new Vector2(0, 0); // Stops player from moving when dead
+        StartCoroutine(DeathDelay());
+
+    }
+
+    private IEnumerator DeathDelay()
+    {
+        yield return new WaitForSeconds(2);
         SceneManager.LoadScene(gameOver);
     }
 }
