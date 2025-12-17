@@ -1260,6 +1260,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db44b8e2fe01f1648b9f8c3fee21435e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::playerMovement
+  mySprite: {fileID: 0}
   playerSpeed: 7
   jumpHeight: 8
   coinCountText: {fileID: 736981824}
