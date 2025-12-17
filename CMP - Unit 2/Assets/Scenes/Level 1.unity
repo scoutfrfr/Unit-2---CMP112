@@ -1264,6 +1264,7 @@ MonoBehaviour:
   playerDying: {fileID: 8300000, guid: f16f5dd3c04c41341aae482d45abecd5, type: 3}
   GameOverSound: {fileID: 8300000, guid: 682332434486d844dbf95f3a18ce1b03, type: 3}
   gameOver: Game Over
+  winScene: Win Scene
 --- !u!50 &425394599
 Rigidbody2D:
   serializedVersion: 5

@@ -9,6 +9,7 @@ TagManager:
   - Hazard
   - Key
   - Edges
+  - Crown
   layers:
   - Default
   - TransparentFX

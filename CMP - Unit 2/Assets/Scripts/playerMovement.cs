@@ -37,8 +37,9 @@ public class playerMovement : MonoBehaviour
     public AudioClip playerDying;
     public AudioClip GameOverSound;
 
-    [Header("Game Over Scene Selection")]
+    [Header("Scene Selections")]
     public string gameOver;
+    public string winScene;
     
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -161,6 +162,13 @@ public class playerMovement : MonoBehaviour
             other.gameObject.SetActive(false); // Deactivate pick up player collided with
             keyCollected = true;
             SetKeyText();
+            source.PlayOneShot(keySound, 1.0f);
+        }
+
+        if (other.gameObject.CompareTag("Crown")) // Checks if the player has collided with crown
+        {
+            other.gameObject.SetActive(false);
+            SceneManager.LoadScene(winScene);
             source.PlayOneShot(keySound, 1.0f);
         }
     }
