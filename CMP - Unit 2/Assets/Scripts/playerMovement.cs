@@ -23,6 +23,7 @@ public class playerMovement : MonoBehaviour
     [Header("Pickups")] 
     public TextMeshProUGUI coinCountText;
     private int coinCount;
+    public TextMeshProUGUI keyCollectedText;
     [HideInInspector]
     public bool keyCollected;
 
@@ -50,6 +51,7 @@ public class playerMovement : MonoBehaviour
         source = GetComponent<AudioSource>();   
         coinCount = 0;
         SetCountText();
+        SetKeyText();
         keyCollected = false;
     }
 
@@ -114,6 +116,19 @@ public class playerMovement : MonoBehaviour
         coinCountText.text = "Coins: " + coinCount.ToString();
     }
 
+    void SetKeyText()
+    {
+        if (keyCollected == true)
+        {
+            keyCollectedText.text = "Key Collected: Yes";
+        }
+        
+        if (keyCollected == false)
+        {
+            keyCollectedText.text = "Key Collected: No";
+        }
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         // Checks object player collides with has the tag "Ground"
@@ -142,6 +157,7 @@ public class playerMovement : MonoBehaviour
         {
             other.gameObject.SetActive(false); // Deactivate pick up player collided with
             keyCollected = true;
+            SetKeyText();
             source.PlayOneShot(keySound, 1.0f);
         }
     }
