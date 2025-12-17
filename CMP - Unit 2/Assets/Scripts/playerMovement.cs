@@ -30,6 +30,7 @@ public class playerMovement : MonoBehaviour
     private AudioSource source;
     public AudioClip jumpSound;
     public AudioClip coinSound;
+    public AudioClip keySound;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -131,6 +132,7 @@ public class playerMovement : MonoBehaviour
         {
             other.gameObject.SetActive(false); // Deactivate pick up player collided with
             keyCollected = true;
+            source.PlayOneShot(keySound, 1.0f);
         }
     }
 
