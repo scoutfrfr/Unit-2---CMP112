@@ -167,9 +167,7 @@ public class playerMovement : MonoBehaviour
 
         if (other.gameObject.CompareTag("Crown")) // Checks if the player has collided with crown
         {
-            other.gameObject.SetActive(false);
             SceneManager.LoadScene(winScene);
-            source.PlayOneShot(keySound, 1.0f);
         }
     }
 
